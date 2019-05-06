@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<a> All Courses </a>
+	
+	<div th:each="course : ${courses}">
+		<h1 th:text="${{course.courseid}}"></h1>
+		<p><a th:text="${{course.coursename}}"></a></p>
+	</div>
+
+</body>
+</html>

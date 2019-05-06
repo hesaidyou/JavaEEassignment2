@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<a> All Coaches </a>
+	<div th:each="coach : ${coaches}">
+		<h1 th:text="${{coach.coachid}}"></h1>
+		<p><a th:text="${{coach.coachname}}"></a></p>
+	</div>
+</body>
+</html>

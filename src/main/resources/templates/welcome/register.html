@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<a>register</a>
+	<form action="/welcome/register/sub">
+		username: <input type="text" name="username"><br>
+		password: <input type="text" name="password"><br>
+		<button type="submit" class="btn btn-primary">register</button>
+	</form>
+   
+</body>
+</html>
+
+
+
+<!--     <form action="/welcome/register/sub" th:action="@{/welcome/register/sub}" th:object="${User}" >
+       <div class="form-group">
+           <label for="inputUsername">Username</label>
+           <input type="text" class="form-control" id="inputUsername" placeholder="Username" th:field="*{userName}" name="userName" />
+       </div>
+       <div class="form-group">
+           <label for="inputPassword">Password</label>
+           <input type="text" class="form-control" id="inputPassword" placeholder="Password" th:field="*{password}" name="password" />
+       </div>
+       <div class="text-right">
+           <a href="/welcome" th:href="@{/welcome}" class="btn btn-default">Cancel</a>
+           <button type="submit" class="btn btn-primary">Save</button>
+       </div> </form>
+       -->
