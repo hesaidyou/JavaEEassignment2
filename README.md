@@ -7,3 +7,5 @@ Member: 16301072 刘洋
 2,Authentication: Oauth2 authetication; Hateos  
 Using password model to control the access to localhost:8080/gym/course/{username}, only the “USER” role can get the resourse  
 3,Cache: spring cache and http cache  
+
+.
