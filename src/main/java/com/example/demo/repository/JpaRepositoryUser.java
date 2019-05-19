@@ -11,6 +11,7 @@ public interface JpaRepositoryUser extends JpaRepository<User, String>{
 	User getByUsername(String username);
 	User getByUsernameAndPassword(String username,String password);
 	//Object getByPasswordAndTelephone(String password, String telephone);
+	void deleteByUsername(String username);
 }
 
 

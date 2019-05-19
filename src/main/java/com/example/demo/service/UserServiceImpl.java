@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
+import com.example.demo.entity.Course;
 import com.example.demo.entity.User;
 import com.example.demo.repository.JpaRepositoryUser;
 
@@ -21,7 +22,6 @@ public class UserServiceImpl implements UserService{
 		this.jpaRepositoryDAO = jpaRepositoryDAO;
 	}
 
-	
 	@Override
 	@Cacheable
 	public List<User> getAllUsers() {
@@ -47,9 +47,16 @@ public class UserServiceImpl implements UserService{
 	}
 
 	@Override
-	@Cacheable
+	@Cacheable(cacheNames = "getByUsernameAndPassword")
 	public User getByUsernameAndPassword(String username,String password) {
 		return this.jpaRepositoryDAO.getByUsernameAndPassword(username,password);
 	}
+	
+	@Override
+	public void deleteByUsername(String username) {
+		this.jpaRepositoryDAO.deleteByUsername(username);
+	}
+
+
 
 }

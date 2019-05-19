@@ -19,7 +19,7 @@ public class CoachServiceImpl implements CoachService {
 	}
 	
 	@Override
-	@Cacheable
+	@Cacheable(cacheNames="getAllCoach")
 	public List<Coach> getAllCoach() {
 		return this.jpaRepository.findAll();
 	}

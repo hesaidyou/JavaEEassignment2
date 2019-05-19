@@ -17,14 +17,14 @@ import javax.persistence.JoinColumn;
 
 @Entity
 public class User {
-	@TableGenerator(table="user", name = "user_gen")
+	//@TableGenerator(table="user", name = "user_gen")
 	@Id
     private String username;
     private String password;
     
-	@ManyToMany(cascade = CascadeType.PERSIST)
-	@JoinTable(name = "course", joinColumns = @JoinColumn(name = "username"), inverseJoinColumns = @JoinColumn(name = "courseid"))
-	private List<Course> courses;
+//	@ManyToMany(cascade = CascadeType.PERSIST)
+//	@JoinTable(name = "course", joinColumns = @JoinColumn(name = "username"), inverseJoinColumns = @JoinColumn(name = "courseid"))
+//	private List<Course> courses;
     
     
     public String getUsername() {
@@ -41,10 +41,5 @@ public class User {
 		this.password = password;
 	}
 
-	public List<Course> getCourses() {
-		return courses;
-	}
-	public void setCourses(List<Course> courses) {
-		this.courses = courses;
-	}
+
 }

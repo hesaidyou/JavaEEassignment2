@@ -7,18 +7,18 @@ import javax.persistence.Id;
 public class Coach {
 	@Id
 	private String coachid;
-	private String coachaname;
+	private String coachname;
 	public String getCoachid() {
 		return coachid;
 	}
 	public void setCoachid(String coachid) {
 		this.coachid = coachid;
 	}
-	public String getCoachaname() {
-		return coachaname;
+	public String getCoachname() {
+		return coachname;
 	}
 	public void setCoachaname(String coachaname) {
-		this.coachaname = coachaname;
+		this.coachname = coachaname;
 	}
 
 	

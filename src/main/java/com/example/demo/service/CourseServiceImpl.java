@@ -18,7 +18,7 @@ public class CourseServiceImpl implements CourseService {
 		this.jrcourse = jrcourse;
 	}
 
-	@Cacheable
+	@Cacheable(cacheNames = "getAllCourses")
 	public  List<Course> getAllCourse(){
 		return jrcourse.findAll();
 	}

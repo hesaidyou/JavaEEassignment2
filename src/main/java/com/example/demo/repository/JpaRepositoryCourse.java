@@ -9,4 +9,6 @@ import com.example.demo.entity.Course;
 
 public interface JpaRepositoryCourse extends JpaRepository<Course, String> {
 	public List<Course> findByCourseid(Pageable pageable);
+	
+
 }

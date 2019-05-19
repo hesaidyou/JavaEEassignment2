@@ -5,8 +5,15 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<a> All Courses </a>
+	<a> My Course</a>
+	<div th:each="mycourse : ${mycourses}">
+		<h1 th:text="${{mycourse.courseid}}"></h1>
+		<p><a th:text="${{mycourse.coursename}}"></a></p>
+	</div>
 	
+	<div> --- </div>
+	
+	<a> All Courses </a>
 	<div th:each="course : ${courses}">
 		<h1 th:text="${{course.courseid}}"></h1>
 		<p><a th:text="${{course.coursename}}"></a></p>
